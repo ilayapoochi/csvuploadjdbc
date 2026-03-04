@@ -24,6 +24,7 @@ public class CsvController {
     public ResponseEntity<String> uploadCsv(@RequestParam("filepath") String filepath) {
         try {
         	logger.info("fileName- {}",filepath);
+        	logger.info("sample test...");
         	invService.importProductsFromCsv("D:\\inoutput\\"+filepath+".csv");
             return ResponseEntity.ok("CSV data saved successfully with streaming!");
         } catch (Exception e) {
